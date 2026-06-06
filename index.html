@@ -12,71 +12,20 @@
 </head>
 
 <body>
-    <!-- slider -->
-    <div class="vir-bar"></div>
-    <div class="slider">
-        <div class="content cont">
-            <div class="set-logo">
-                <h1>settings <i class="fa-solid fa-gear"></i></h1>
-            </div>
-            <div class="theme">
-                <div class="change-bg">
-                    change background:- <i class="fa-solid fa-upload"></i>
-                </div>
-                <div class="mode">
-                    Mode:-
-                    <div class="dark">
-                        <button class="btn seprate">
-                            <i class="fa-solid fa-moon"></i>
-                        </button>
-                    </div>
-                    <div class="light">
-                        <button class="btn seprate">
-                            <i class="fa-regular fa-lightbulb"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="my-work">
-                <h1>my work</h1>
-                <div class="link">
-                    <i class="fa-solid fa-crosshairs"></i>claculator
-                </div>
-                <div class="link">
-                    <i class="fa-solid fa-crosshairs"></i>clone
-                </div>
-                <div class="link">
-                    <i class="fa-solid fa-crosshairs"></i>flip card
-                </div>
-            </div>
-            <div class="contact">
-                <h1>contacts</h1>
-                <div class="link">
-                    <i class="fa-brands fa-ethereum"></i>instagram
-                </div>
-                <div class="link">
-                    <i class="fa-brands fa-ethereum"></i>telegram
-                </div>
-                <div class="link">
-                    <i class="fa-brands fa-ethereum"></i>facebook
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- mainbody -->
-
-
     <div class="container">
         <!-- header -->
         <div class="head">
-            <div class="head-top">
-                <div class="title">
-                    <h1>To-Do List</h1>
-                </div>
-                <div class="slide-bar">
-                    <i class="fa-solid fa-gear"></i>
-                </div>
+            <div class="title">
+                <h1>To-Do List</h1>
+                <p class="counter">counter:
+                    <span></span>
+                </p>
+            </div>
+            <div class="search-bar">
+                <input class="search-box" type="text" placeholder="search">
+                <i style="cursor:pointer"
+                 class="fa-solid fa-magnifying-glass search-btn"></i>
             </div>
         </div>
 
@@ -84,28 +33,18 @@
         <div class="section">
             <div class="a1">
                 <form class="task-input">
-                    <input type="text" id="input" placeholder="write your task">
-                    <button type="submit" class="submit"><i class="fa-solid fa-plus"></i></button>
+                    <input class="user-input" type="text" id="input" placeholder="write your task">
+                    <button type="submit" class="add-button"><i class="fa-solid fa-plus"></i></button>
                 </form>
+                <div class="clear">X</div>
+                <div class="clear-com">X</div>
             </div>
             <div class="task-list">
-                <div class="task" id="hidden">
-                    <div class="left">
-                        <input type="checkbox" class="checkbox">
-                        <p class="text">task</p>
-                    </div>
-                    <div class="right">
-                        <div class="delete">
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                        <div class="edit">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <script src="script.js"></script>
+    </div>
+    <script src="script.js"> </script>
 </body>
 
 </html>

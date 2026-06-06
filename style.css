@@ -21,7 +21,7 @@ body {
 .container {
     width: 870px;
     height: 700px;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -52,22 +52,36 @@ body {
     border-radius: 15px;
 }
 
-.head-top {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    margin: 10px;
-}
-
 .title {
-    margin-left: 40%;
-}
-
-.head-buttom {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    height: 30%;
+    gap: 20px;
+}
+
+.counter {
+    font-size: 1.1rem;
+    backdrop-filter: blur(100px);
+    background-image: linear-gradient(45deg, rgba(223, 21, 223, 0.3), rgba(55, 55, 231, 0.3));
+    padding: 4px;
+    border-radius: 8px;
+    width: auto;
+    font-weight: 500;
+}
+
+.clear,.clear-com{
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-image: linear-gradient(45deg, rgba(223, 21, 223, 0.3), rgba(55, 55, 231, 0.3));
+    cursor: pointer;
+}
+
+.clear{
+    color:red;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 h1 {
@@ -75,6 +89,30 @@ h1 {
     background-image: linear-gradient(45deg, rgba(223, 21, 223, 0.3), rgba(55, 55, 231, 0.3));
     padding: 8px;
     border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+.search-bar {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box{
+    border-radius: 10px;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: 2px rgb(102, 102, 102) solid;
+    background-image: linear-gradient(45deg, rgba(223, 21, 223, 0.3), rgba(55, 55, 231, 0.3));
+    cursor:text;
+}
+
+.search-btn {
+    color: rgb(37, 36, 36);
     font-size: 1.5rem;
 }
 
@@ -100,13 +138,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 10px;
 }
 
 .task-input {
     border-radius: 10px;
     width: 80%;
     height: 100%;
+    cursor: text;
 }
 
 #input {
@@ -117,7 +156,7 @@ h1 {
     border: 2px rgb(102, 102, 102) solid;
 }
 
-.submit {
+.add-button {
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -132,11 +171,11 @@ h1 {
     margin: 20px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: start;
     align-items: center;
     background-image: linear-gradient(45deg, rgba(110, 214, 180, 0.3), rgba(99, 99, 197, 0.3));
-    gap: 10px;
+    gap: 5px;
     overflow: scroll;
     scrollbar-width: none;
 }
@@ -152,6 +191,16 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.edit-Text{
+    padding:5px;
+    height: auto;
+   background-image: linear-gradient(45deg, rgb(110, 214, 179), rgb(99, 99, 197));
+    border-radius: 20px;
+    border: none;
+    cursor:cell;
 }
 
 .left,
@@ -171,6 +220,13 @@ h1 {
 .delete,
 .edit {
     margin: 0px 5px;
+    cursor: pointer;
+}
+
+.delete{
+    border:none;
+    background-color: transparent;
+    font-size: 1.2rem;
 }
 
 /* hidding manuale created task */
@@ -181,108 +237,4 @@ h1 {
     padding: 0px;
     overflow: hidden;
     visibility: hidden;
-}
-
-/* slider */
-
-.slider {
-    z-index: 10;
-    background-color: white;
-    width: 0px;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(15px);
-    border-right: solid black 2px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    transition: all ease .8s;
-    transform: rotate(0deg);
-    overflow: hidden;
-    display: flex;
-}
-
-.fa-gear {
-    transition: all ease 0.5s;
-    transform: rotate(0deg);
-}
-
-.fa-gear:active {
-    transform: rotate(360deg);
-}
-
-.content {
-    margin: 20px 20px 20px 50px;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.25rem;
-    gap: 30px;
-    height: 100%;
-    width: 75%;
-}
-
-.set-logo {
-    font-size: 1.5rem;
-}
-
-.theme {
-    background-color: rgba(131, 54, 231, 0.281);
-    backdrop-filter: blur(15px);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    border: solid black 2px;
-}
-
-.mode {
-    display: flex;
-    margin-top: 30px;
-    gap: 10px;
-}
-
-.seprate:hover {
-    background-color: rgba(99, 99, 99, 0.616);
-}
-
-.seprate:active {
-    background-color: rgba(255, 85, 85, 0.616);
-}
-
-.my-work {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.seprate {
-    border-radius: 50%;
-    backdrop-filter: saturate(7);
-    height: 2.2rem;
-    width: 2.2rem;
-    font-size: 1.5rem;
-    margin: 5px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-/* virtical bar */
-
-.vir-bar {
-    background-color: rgba(179, 35, 95, 0.438);
-    width: 40px;
-    height: 101%;
-    position: absolute;
-    left: 0px;
-    z-index: 20;
-    border-right: solid black 2px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 4px 3px 20px 0px #4f4e4e;
 }
