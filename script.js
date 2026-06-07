@@ -14,11 +14,11 @@ let taskData = JSON.parse(localStorage.getItem("taskData")) || []
 // debounce funtion
 function debounce(fn, delay) {
     let timer
-    return function (arguments) {
+    return function (...args) {
         clearTimeout(timer)
 
         timer = setTimeout(() => {
-            fn(this, arguments)
+            fn.apply(this, args)
         }, delay)
     }
 }
